@@ -1,0 +1,23 @@
+{
+    "name": "kick-start-node-project",
+    "version": "0.0.0",
+    "license": "MIT",
+    "author": "SalemAttia <salem.at.ibrahim@gmail.com>",
+    "description": "",
+    "repository": {
+      "type": "git",
+      "url": "git@github.com:SalemAttia/kick-start-node-project.git"
+    },
+    "engine": {
+      "node": ">=10.0.0",
+      "npm": ">=6.0.0"
+    },
+    "contributors": [
+      {
+        "name": "Salem Attia <SalemAttia>",
+        "email": "salem.at.ibrahim@gmail.com"
+      }
+    ],
+    "main": "server"
+  }
+  
