@@ -1,0 +1,23 @@
+version: '3'
+services:
+  node:
+    tty: true
+    stdin_open: true
+    container_name: kick-start-node-project
+    env_file:
+      - ./.env
+    depends_on:
+      - mongo
+    build:
+      context: .
+    ports:
+      - 4090:4090
+    volumes:
+      - .:/var/code:rw
+    command: npm start
+    links:
+      - mongo:mongo
+  mongo:
+    image: 'mongo:3.4'
+    logging:
+      driver: 'none'
