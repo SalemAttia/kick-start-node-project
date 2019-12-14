@@ -10,7 +10,7 @@ class ItemController extends BaseController {
     }
 
     async getAll() {
-        const promise = await this.ItemRepository.findAll();
+        const promise = await this.service.getAll();
         const response = await this.respond(promise, 200);
         return response;
     }
@@ -22,20 +22,20 @@ class ItemController extends BaseController {
     }
 
     async show(id) {
-        const promise = await this.ItemRepository.show(id);
+        const promise = await this.service.show(id);
         const response = await this.respond(promise, 200);
         return response;
     }
 
     async update(data) {
-        const promise = await this.ItemRepository.update(data);
+        const promise = await this.service.update(data);
         const response = await this.respond(promise, 201);
         return response;
     }
 
     async remove(data) {
-        const promise = await this.ItemRepository.remove(data);
-        const response = await this.respond(promise, 200);
+        const promise = await this.service.remove(data);
+        const response = await this.respond(promise, 301);
         return response;
     }
 
