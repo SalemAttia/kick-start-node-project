@@ -8,7 +8,7 @@ class ItemsIllegalArgumentError extends Error {
 
     constructor(message) {
         super(message);
-        this.name = 'ItemssIllegalArgument';
+        this.name = 'IllegalArgument';
     }
 
 }
@@ -17,7 +17,7 @@ class ItemNotFoundError extends Error {
 
     constructor(message) {
         super(message);
-        this.name = 'ItemNotFound';
+        this.name = 'NotFound';
     }
 
 }
@@ -47,7 +47,7 @@ class ItemRepository {
 
     findById(itemId) {
         if(_.isNil(itemId)) {
-            throw new ItemsIllegalArgumentError('missing blog id');
+            throw new ItemsIllegalArgumentError('missing id');
         }
 
         return this._find(itemId);
@@ -83,7 +83,7 @@ class ItemRepository {
         const item = await this.model.findById(itemId);
         
         if(_.isNil(item)) {
-            throw new ItemNotFoundError('blog not found');
+            throw new ItemNotFoundError('not found');
         }
 
         return item;
