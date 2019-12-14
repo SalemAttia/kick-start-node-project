@@ -8,6 +8,7 @@ const connection = require('./connection');
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
+const itemRoutes = require('./src/Routes/items')(app);
 
 const dbConnection = async() => {
     const mongoose = await connection();
@@ -16,6 +17,7 @@ const dbConnection = async() => {
 
 module.exports =  {
     'database.connection': dbConnection(),
+    'item.routes': itemRoutes,
     'express.app': app,
 };
 

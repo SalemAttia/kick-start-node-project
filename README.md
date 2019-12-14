@@ -7,11 +7,11 @@ this is a node project template for quack start any new peoject
 - [X] Dockarize the application
 - [X] Use eslint
 - [X] Folder Structure
-- [] Simple crud opration
-- [] Implament uploading files
+- [X] Simple crud opration
 - [] CI/CD
-- [] Sending emails
 - [] Register 
 - [] Login 
+- [] Implament uploading files
+- [] Sending emails
 - [] Realtime notification
 - [] Chating 
