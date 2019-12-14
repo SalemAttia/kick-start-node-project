@@ -37,7 +37,7 @@ class BaseController {
         }
 
         return { ok: true, data: { items: response } };
-    };
+    }
 
 }
 
